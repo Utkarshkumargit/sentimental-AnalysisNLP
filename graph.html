@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Analysis - SentimentAI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>SentimentAI</h2>
+    <a href="index.html">Home</a>
+    <a href="analyze.html">Analyze</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="graph.html">Graph Analysis</a>
+    <a href="report.html">Reports</a>
+
+</div>
+
+<div class="main">
+    <div class="breadcrumb">Home / Graph Analysis</div>
+
+    <div class="chart-card">
+        <canvas id="pieChart"></canvas>
+    </div>
+
+<script>
+new Chart(document.getElementById("pieChart"), {
+    type: "pie",
+    data: {
+        labels: ["Positive", "Neutral", "Negative"],
+        datasets: [{
+            data: [120, 45, 30],
+            backgroundColor: ["#16A34A", "#F59E0B", "#DC2626"]
+        }]
+    }
+});
+</script>
+
+</div>
+</body>
+</html>
